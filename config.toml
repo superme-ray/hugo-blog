@@ -1,0 +1,8 @@
+baseURL = "https://superme-ray.github.io/"
+languageCode = "en-us"
+title = "码哥Ray的博客"
+theme = "hugo-lamp"
+cover = "/img/cover.jpg"
+[params]
+    logo =  "/img/logo.jpg"
+
