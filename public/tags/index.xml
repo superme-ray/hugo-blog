@@ -29,23 +29,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>tagA</title>
-      <link>https://superme-ray.github.io/tags/taga/</link>
-      <pubDate>Wed, 29 May 2019 16:35:42 +0800</pubDate>
-      
-      <guid>https://superme-ray.github.io/tags/taga/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tagB</title>
-      <link>https://superme-ray.github.io/tags/tagb/</link>
-      <pubDate>Wed, 29 May 2019 16:35:42 +0800</pubDate>
-      
-      <guid>https://superme-ray.github.io/tags/tagb/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
