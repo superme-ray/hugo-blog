@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tagA on 码哥Ray的博客</title>
+    <link>https://superme-ray.github.io/tags/taga/</link>
+    <description>Recent content in tagA on 码哥Ray的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 May 2019 16:35:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://superme-ray.github.io/tags/taga/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test</title>
+      <link>https://superme-ray.github.io/post/test/</link>
+      <pubDate>Wed, 29 May 2019 16:35:42 +0800</pubDate>
+      
+      <guid>https://superme-ray.github.io/post/test/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
