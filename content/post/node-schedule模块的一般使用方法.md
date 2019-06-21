@@ -1,7 +1,6 @@
 ---
 title: "Node Schedule模块的一般使用方法"
 author: "ray"
-cover: ""
 tags: ["nodejs"]
 date: 2019-06-21T11:46:41+08:00
 draft: true

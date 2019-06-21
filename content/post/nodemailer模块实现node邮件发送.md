@@ -1,7 +1,6 @@
 ---
 title: "Nodemailer模块实现node邮件发送"
 author: "码哥"
-cover: "/img/cover.jpg"
 tags: ["nodejs"]
 date: 2019-06-20T16:11:02+08:00
 draft: true
