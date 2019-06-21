@@ -227,6 +227,72 @@
       
         <article class="entry-single">
   
+    <a href="https://superme-ray.github.io/post/node-schedule%E6%A8%A1%E5%9D%97%E7%9A%84%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Node Schedule模块的一般使用方法">
+      <amp-img alt="Node Schedule模块的一般使用方法"
+        height="244"
+        layout="fixed-height"
+        class="entry-cover"
+        src="">
+      </amp-img>
+    </a>
+  
+  <header class="entry-header">
+    <h3 class="entry-title"><a href="https://superme-ray.github.io/post/node-schedule%E6%A8%A1%E5%9D%97%E7%9A%84%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Node Schedule模块的一般使用方法" class="entry-link">Node Schedule模块的一般使用方法</a></h3>
+  </header>
+
+  <p class="entry-summary">&#34;use strict&#34;; var schedule = require(&#34;node-schedule&#34;); //1. 确定的时间执行 var date = new Date(2016,6,13,15,50,0); schedule.scheduleJob(date, function(){ console.log(&#34;执行任务&#34;); }); //2. 秒为单位执行 //比如:每5秒执行一次 var rule1 = new schedule.RecurrenceRule(); var times1 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule1.second = times1; schedule.scheduleJob(rule1, function(){ console.log(&#34;执行任务秒为单位&#34;); }); //3.以分为单位执行 //比如:每5分种执行一次 var rule2 = new schedule.RecurrenceRule(); var times2 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule2.minute = times2; schedule.scheduleJob(rule2, function(){ console.log(&#34;执行任务分为单位&#34;); }); //4.以天单位执行 //比如:每天6点30分执行 var rule = new schedule.RecurrenceRule(); rule.dayOfWeek = [0, new schedule.Range(1, 6)]; rule.hour = 6; rule.</p>
+  <footer class="entry-footer">
+    <p class="entry-meta"><span class="entry-time">2019年6月21日</span> 2 次阅读</p>
+
+
+
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+      
+        <article class="entry-single">
+  
+    <a href="https://superme-ray.github.io/post/nodemailer%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0node%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/" title="Nodemailer模块实现node邮件发送">
+      <amp-img alt="Nodemailer模块实现node邮件发送"
+        height="244"
+        layout="fixed-height"
+        class="entry-cover"
+        src="/img/cover.jpg">
+      </amp-img>
+    </a>
+  
+  <header class="entry-header">
+    <h3 class="entry-title"><a href="https://superme-ray.github.io/post/nodemailer%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0node%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/" title="Nodemailer模块实现node邮件发送" class="entry-link">Nodemailer模块实现node邮件发送</a></h3>
+  </header>
+
+  <p class="entry-summary">const nodemailer = require(&#39;nodemailer&#39;); //发送邮件的node插件 let transporter = nodemailer.createTransport({ service: &#39;126&#39;, // 发送者的邮箱厂商，支持列表：https://nodemailer.com/smtp/well-known/ port: 465, // SMTP 端口 secureConnection: true, // SSL安全链接 auth: { //发送者的账户密码 user: &#39;artistcoder@126.com&#39;, //账户 pass: &#39;xxxx&#39;, //smtp授权码，到邮箱设置下获取 } }); let mailOptions = { from: &#39;&#34;vince&#34; &lt;artistcoder@126.com&gt;&#39;, // 发送者昵称和地址 to: &#39;like@vince.studio&#39;, // 接收者的邮箱地址 subject: &#39;一封暖暖的小邮件&#39;, // 邮件主题 text: &#39;test mail&#39;, //邮件的text // html: html //也可以用html发送 }; //发送邮件 transporter.sendMail(mailOptions, (error, info) =&gt; { if (error) { return console.log(error); } console.</p>
+  <footer class="entry-footer">
+    <p class="entry-meta"><span class="entry-time">2019年6月20日</span> 1 次阅读</p>
+
+
+
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+      
+        <article class="entry-single">
+  
     <a href="https://superme-ray.github.io/post/console%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA%E5%AF%B9%E9%BD%90/" title="Console控制台输出对齐">
       <amp-img alt="Console控制台输出对齐"
         height="244"

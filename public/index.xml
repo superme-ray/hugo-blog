@@ -6,10 +6,28 @@
     <description>Recent content on 码哥Ray的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jun 2019 11:30:22 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Jun 2019 11:46:41 +0800</lastBuildDate>
     
 	<atom:link href="https://superme-ray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Node Schedule模块的一般使用方法</title>
+      <link>https://superme-ray.github.io/post/node-schedule%E6%A8%A1%E5%9D%97%E7%9A%84%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Fri, 21 Jun 2019 11:46:41 +0800</pubDate>
+      
+      <guid>https://superme-ray.github.io/post/node-schedule%E6%A8%A1%E5%9D%97%E7%9A%84%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>&amp;quot;use strict&amp;quot;; var schedule = require(&amp;quot;node-schedule&amp;quot;); //1. 确定的时间执行 var date = new Date(2016,6,13,15,50,0); schedule.scheduleJob(date, function(){ console.log(&amp;quot;执行任务&amp;quot;); }); //2. 秒为单位执行 //比如:每5秒执行一次 var rule1 = new schedule.RecurrenceRule(); var times1 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule1.second = times1; schedule.scheduleJob(rule1, function(){ console.log(&amp;quot;执行任务秒为单位&amp;quot;); }); //3.以分为单位执行 //比如:每5分种执行一次 var rule2 = new schedule.RecurrenceRule(); var times2 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule2.minute = times2; schedule.scheduleJob(rule2, function(){ console.log(&amp;quot;执行任务分为单位&amp;quot;); }); //4.以天单位执行 //比如:每天6点30分执行 var rule = new schedule.RecurrenceRule(); rule.dayOfWeek = [0, new schedule.Range(1, 6)]; rule.hour = 6; rule.</description>
+    </item>
+    
+    <item>
+      <title>Nodemailer模块实现node邮件发送</title>
+      <link>https://superme-ray.github.io/post/nodemailer%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0node%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/</link>
+      <pubDate>Thu, 20 Jun 2019 16:11:02 +0800</pubDate>
+      
+      <guid>https://superme-ray.github.io/post/nodemailer%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0node%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/</guid>
+      <description>const nodemailer = require(&#39;nodemailer&#39;); //发送邮件的node插件 let transporter = nodemailer.createTransport({ service: &#39;126&#39;, // 发送者的邮箱厂商，支持列表：https://nodemailer.com/smtp/well-known/ port: 465, // SMTP 端口 secureConnection: true, // SSL安全链接 auth: { //发送者的账户密码 user: &#39;artistcoder@126.com&#39;, //账户 pass: &#39;xxxx&#39;, //smtp授权码，到邮箱设置下获取 } }); let mailOptions = { from: &#39;&amp;quot;vince&amp;quot; &amp;lt;artistcoder@126.com&amp;gt;&#39;, // 发送者昵称和地址 to: &#39;like@vince.studio&#39;, // 接收者的邮箱地址 subject: &#39;一封暖暖的小邮件&#39;, // 邮件主题 text: &#39;test mail&#39;, //邮件的text // html: html //也可以用html发送 }; //发送邮件 transporter.sendMail(mailOptions, (error, info) =&amp;gt; { if (error) { return console.log(error); } console.</description>
+    </item>
     
     <item>
       <title>Console控制台输出对齐</title>
