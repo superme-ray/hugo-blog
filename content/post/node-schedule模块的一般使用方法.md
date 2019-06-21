@@ -5,9 +5,12 @@ tags: ["nodejs"]
 date: 2019-06-21T11:46:41+08:00
 draft: true
 ---
+## node-schedule做定时任务有《两种》方式可以选择
+
+**方式1「Date-based Scheduling」**
+
 ```
 "use strict";
-
 var schedule = require("node-schedule");  
 
 //1. 确定的时间执行
@@ -45,12 +48,13 @@ var j = schedule.scheduleJob(rule, function(){
         getData();
 });
 
+}
+```
 
-//5.参数为直接date参数
-// date 参数
+**方式2「Cron-style Scheduling」**
+```
 //其他规则见 https://www.npmjs.com/package/node-schedule
 // 规则参数讲解    *代表通配符
-//
 //     *    *    *    *    *    *
 //     ┬    ┬    ┬    ┬    ┬    ┬
 //     │    │    │    │    │    │
@@ -60,22 +64,15 @@ var j = schedule.scheduleJob(rule, function(){
 //     │    │    └─────────────── hour (0 - 23)
 //     │    └──────────────────── minute (0 - 59)
 //     └───────────────────────── second (0 - 59, OPTIONAL)
-
 // 每分钟的第30秒触发： '30 * * * * *'
-//
 // 每小时的1分30秒触发 ：'30 1 * * * *'
-//
 // 每天的凌晨1点1分30秒触发 ：'30 1 1 * * *'
-//
 // 每月的1日1点1分30秒触发 ：'30 1 1 1 * *'
-//
 // 每周1的1点1分30秒触发 ：'30 1 1 * * 1'
-let date = '10 * * * * *';//每分钟的第10秒触发
 
+let date = '10 * * * * *';//每分钟的第10秒触发
 schedule.scheduleJob(date, function () {
     console.log("执行任务参数形式");
 });
-
 ```
-
 

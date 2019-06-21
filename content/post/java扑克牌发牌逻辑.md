@@ -1,7 +1,6 @@
 ---
 title: "Java扑克牌发牌逻辑"
 author: "ray"
-cover: "/img/cover.jpg"
 tags: ["java"]
 date: 2019-05-31T14:22:46+08:00
 draft: true

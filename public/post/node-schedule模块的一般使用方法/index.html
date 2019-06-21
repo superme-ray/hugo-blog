@@ -20,14 +20,16 @@
   
   
   <meta name="author" content="ray" />
-  <meta name="description" content="&amp;quot;use strict&amp;quot;; var schedule = require(&amp;quot;node-schedule&amp;quot;); //1. 确定的时间执行 var date = new Date(2016,6,13,15,50,0); schedule.scheduleJob(date, function(){ console.log(&amp;quot;执行任务&amp;quot;); }); //2. 秒为单位执行 //比如:每5秒执行一次 var rule1 = new schedule.RecurrenceRule(); var times1 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule1.second = times1; schedule.scheduleJob(rule1, function(){ console.log(&amp;quot;执行任务秒为单位&amp;quot;); }); //3.以分为单位执行 //比如:每5分种执行一次 var rule2 = new schedule.RecurrenceRule(); var times2 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule2.minute = times2; schedule.scheduleJob(rule2, function(){ console.log(&amp;quot;执行任务分为单位&amp;quot;); }); //4.以天单位执行 //比如:每天6点30分执行 var rule = new schedule.RecurrenceRule(); rule.dayOfWeek = [0, new schedule.Range(1, 6)]; rule.hour = 6; rule.">
+  <meta name="description" content="node-schedule做定时任务有《两种》方式可以选择 方式1「Date-based Scheduling」
+&amp;quot;use strict&amp;quot;; var schedule = require(&amp;quot;node-schedule&amp;quot;); //1. 确定的时间执行 var date = new Date(2016,6,13,15,50,0); schedule.scheduleJob(date, function(){ console.log(&amp;quot;执行任务&amp;quot;); }); //2. 秒为单位执行 //比如:每5秒执行一次 var rule1 = new schedule.RecurrenceRule(); var times1 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule1.second = times1; schedule.scheduleJob(rule1, function(){ console.log(&amp;quot;执行任务秒为单位&amp;quot;); }); //3.以分为单位执行 //比如:每5分种执行一次 var rule2 = new schedule.RecurrenceRule(); var times2 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule2.minute = times2; schedule.scheduleJob(rule2, function(){ console.log(&amp;quot;执行任务分为单位&amp;quot;); }); //4.以天单位执行 //比如:每天6点30分执行 var rule = new schedule.RecurrenceRule(); rule.dayOfWeek = [0, new schedule.Range(1, 6)]; rule.">
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@gohugoio" />
     <meta name="twitter:title" content="Node Schedule模块的一般使用方法" />
-    <meta name="twitter:description" content="&amp;quot;use strict&amp;quot;; var schedule = require(&amp;quot;node-schedule&amp;quot;); //1. 确定的时间执行 var date = new Date(2016,6,13,15,50,0); schedule.scheduleJob(date, function(){ console.log(&amp;quot;执行任务&amp;quot;); }); //2. 秒为单位执行 //比如:每5秒执行一次 var rule1 = new schedule.RecurrenceRule(); var times1 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule1.second = times1; schedule.scheduleJob(rule1, function(){ console.log(&amp;quot;执行任务秒为单位&amp;quot;); }); //3.以分为单位执行 //比如:每5分种执行一次 var rule2 = new schedule.RecurrenceRule(); var times2 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule2.minute = times2; schedule.scheduleJob(rule2, function(){ console.log(&amp;quot;执行任务分为单位&amp;quot;); }); //4.以天单位执行 //比如:每天6点30分执行 var rule = new schedule.RecurrenceRule(); rule.dayOfWeek = [0, new schedule.Range(1, 6)]; rule.hour = 6; rule." />
+    <meta name="twitter:description" content="node-schedule做定时任务有《两种》方式可以选择 方式1「Date-based Scheduling」
+&amp;quot;use strict&amp;quot;; var schedule = require(&amp;quot;node-schedule&amp;quot;); //1. 确定的时间执行 var date = new Date(2016,6,13,15,50,0); schedule.scheduleJob(date, function(){ console.log(&amp;quot;执行任务&amp;quot;); }); //2. 秒为单位执行 //比如:每5秒执行一次 var rule1 = new schedule.RecurrenceRule(); var times1 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule1.second = times1; schedule.scheduleJob(rule1, function(){ console.log(&amp;quot;执行任务秒为单位&amp;quot;); }); //3.以分为单位执行 //比如:每5分种执行一次 var rule2 = new schedule.RecurrenceRule(); var times2 = [1,6,11,16,21,26,31,36,41,46,51,56]; rule2.minute = times2; schedule.scheduleJob(rule2, function(){ console.log(&amp;quot;执行任务分为单位&amp;quot;); }); //4.以天单位执行 //比如:每天6点30分执行 var rule = new schedule.RecurrenceRule(); rule.dayOfWeek = [0, new schedule.Range(1, 6)]; rule." />
     <meta name="twitter:image" content="https://superme-ray.github.io/img/avatar.jpg" />
   
 
@@ -222,8 +224,13 @@
     </header>
     
 
-    <article class="post-content"><pre><code>&quot;use strict&quot;;
+    <article class="post-content">
 
+<h2 id="node-schedule做定时任务有-两种-方式可以选择">node-schedule做定时任务有《两种》方式可以选择</h2>
+
+<p><strong>方式1「Date-based Scheduling」</strong></p>
+
+<pre><code>&quot;use strict&quot;;
 var schedule = require(&quot;node-schedule&quot;);  
 
 //1. 确定的时间执行
@@ -261,12 +268,13 @@ var j = schedule.scheduleJob(rule, function(){
         getData();
 });
 
+}
+</code></pre>
 
-//5.参数为直接date参数
-// date 参数
-//其他规则见 https://www.npmjs.com/package/node-schedule
+<p><strong>方式2「Cron-style Scheduling」</strong></p>
+
+<pre><code>//其他规则见 https://www.npmjs.com/package/node-schedule
 // 规则参数讲解    *代表通配符
-//
 //     *    *    *    *    *    *
 //     ┬    ┬    ┬    ┬    ┬    ┬
 //     │    │    │    │    │    │
@@ -276,22 +284,16 @@ var j = schedule.scheduleJob(rule, function(){
 //     │    │    └─────────────── hour (0 - 23)
 //     │    └──────────────────── minute (0 - 59)
 //     └───────────────────────── second (0 - 59, OPTIONAL)
-
 // 每分钟的第30秒触发： '30 * * * * *'
-//
 // 每小时的1分30秒触发 ：'30 1 * * * *'
-//
 // 每天的凌晨1点1分30秒触发 ：'30 1 1 * * *'
-//
 // 每月的1日1点1分30秒触发 ：'30 1 1 1 * *'
-//
 // 每周1的1点1分30秒触发 ：'30 1 1 * * 1'
-let date = '10 * * * * *';//每分钟的第10秒触发
 
+let date = '10 * * * * *';//每分钟的第10秒触发
 schedule.scheduleJob(date, function () {
     console.log(&quot;执行任务参数形式&quot;);
 });
-
 </code></pre>
 </article>
     <footer class="post-footer">
