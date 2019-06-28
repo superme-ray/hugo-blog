@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>小程序 on 码哥Ray的博客</title>
+    <link>https://superme-ray.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+    <description>Recent content in 小程序 on 码哥Ray的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jun 2019 09:03:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://superme-ray.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微信小程序显示md－html的方式</title>
+      <link>https://superme-ray.github.io/post/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%98%BE%E7%A4%BAmdhtml%E7%9A%84%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Fri, 28 Jun 2019 09:03:41 +0800</pubDate>
+      
+      <guid>https://superme-ray.github.io/post/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%98%BE%E7%A4%BAmdhtml%E7%9A%84%E6%96%B9%E5%BC%8F/</guid>
+      <description>###实现微信小程序中对html 和　markdown　的渲预染有多种方法，可以利用第三方插件，比如wxParse, toWxml等，但是从1.4版本之后，微信退出了自己组件，足以支持这些需求．
+##riche-text组件
+&amp;lt;rich-text nodes=&amp;quot;{{nodes}}&amp;quot; bindtap=&amp;quot;tap&amp;quot;&amp;gt;&amp;lt;/rich-text&amp;gt; Page({ data: { nodes: [{ name: &#39;div&#39;, attrs: { class: &#39;div_class&#39;, style: &#39;line-height: 60px; color: red;&#39; }, children: [{ type: &#39;text&#39;, text: &#39;Hello&amp;amp;nbsp;World!&#39; }] }] }, tap() { console.log(&#39;tap&#39;) } })  ###其中nodes参数支持数组和String　２种参数方式．但是一般不推荐字符串类型，会降低性能．</description>
+    </item>
+    
+  </channel>
+</rss>
