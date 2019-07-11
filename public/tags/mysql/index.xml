@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on 码哥Ray的博客</title>
+    <link>https://superme-ray.github.io/tags/mysql/</link>
+    <description>Recent content in mysql on 码哥Ray的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jul 2019 16:29:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://superme-ray.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mysql基本查询语句</title>
+      <link>https://superme-ray.github.io/post/mysql%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Fri, 05 Jul 2019 16:29:23 +0800</pubDate>
+      
+      <guid>https://superme-ray.github.io/post/mysql%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/</guid>
+      <description>Mysql 入门最基本的语句
+	Mysql -uusername -ppassword //连接Mysql服务器  当脸上服务器后，首先面对的是库，有１个或者多个库，那想要对表进行操作的话，得选则对应的库 可以使用 Show databases 来查看有哪些库
+	use test //选库的语句	 选库之后就是面对了表 查看库下面所有的表
+	show tables  创建一个数据库 (create database 数据库名称［charset 字符集］)
+	create databases test1 charset utf8  删除一个数据库 (drop databases 数据库名称)
+	drop databases test1   注意：Mysql中的数据库不能重命名．可以修改表和列的名称
+ </description>
+    </item>
+    
+  </channel>
+</rss>

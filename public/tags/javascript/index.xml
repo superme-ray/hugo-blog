@@ -6,10 +6,21 @@
     <description>Recent content in javascript on 码哥Ray的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jul 2019 09:44:49 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 14:19:13 +0800</lastBuildDate>
     
 	<atom:link href="https://superme-ray.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Moment相加相减时间方式</title>
+      <link>https://superme-ray.github.io/post/moment%E7%9B%B8%E5%8A%A0%E7%9B%B8%E5%87%8F%E6%97%B6%E9%97%B4%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Thu, 04 Jul 2019 14:19:13 +0800</pubDate>
+      
+      <guid>https://superme-ray.github.io/post/moment%E7%9B%B8%E5%8A%A0%E7%9B%B8%E5%87%8F%E6%97%B6%E9%97%B4%E6%96%B9%E5%BC%8F/</guid>
+      <description>利用moment对时间进行加减天数，小时数方法 var startTime = &amp;lsquo;2017-12-12&amp;rsquo; 对startTime进行加减一天的方法如下 moment(new Date(startTime)).add(1,&amp;lsquo;days&amp;rsquo;) moment(new Date(startTime)).subtract(1,&amp;lsquo;days&amp;rsquo;)
+ 需要注意的是，moment(param).add()中的param必须是ＩＳＯ格式的时间．不然无效．
+ </description>
+    </item>
     
     <item>
       <title>小程序运行机制</title>

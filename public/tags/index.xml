@@ -6,15 +6,24 @@
     <description>Recent content in Tags on 码哥Ray的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jul 2019 09:44:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 16:29:23 +0800</lastBuildDate>
     
 	<atom:link href="https://superme-ray.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>mysql</title>
+      <link>https://superme-ray.github.io/tags/mysql/</link>
+      <pubDate>Fri, 05 Jul 2019 16:29:23 +0800</pubDate>
+      
+      <guid>https://superme-ray.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>javascript</title>
       <link>https://superme-ray.github.io/tags/javascript/</link>
-      <pubDate>Wed, 03 Jul 2019 09:44:49 +0800</pubDate>
+      <pubDate>Thu, 04 Jul 2019 14:19:13 +0800</pubDate>
       
       <guid>https://superme-ray.github.io/tags/javascript/</guid>
       <description></description>

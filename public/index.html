@@ -219,6 +219,96 @@
       
         <article class="entry-single">
   
+    <a href="https://superme-ray.github.io/post/mysql%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/" title="Mysql基本查询语句">
+      <amp-img alt="Mysql基本查询语句"
+        height="244"
+        layout="fixed-height"
+        class="entry-cover"
+        src="/img/cover.jpg">
+      </amp-img>
+    </a>
+  
+  <header class="entry-header">
+    <h3 class="entry-title"><a href="https://superme-ray.github.io/post/mysql%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/" title="Mysql基本查询语句" class="entry-link">Mysql基本查询语句</a></h3>
+  </header>
+
+  <p class="entry-summary">Mysql 入门最基本的语句
+	Mysql -uusername -ppassword //连接Mysql服务器  当脸上服务器后，首先面对的是库，有１个或者多个库，那想要对表进行操作的话，得选则对应的库 可以使用 Show databases 来查看有哪些库
+	use test //选库的语句	 选库之后就是面对了表 查看库下面所有的表
+	show tables  创建一个数据库 (create database 数据库名称［charset 字符集］)
+	create databases test1 charset utf8  删除一个数据库 (drop databases 数据库名称)
+	drop databases test1   注意：Mysql中的数据库不能重命名．可以修改表和列的名称
+ </p>
+  <footer class="entry-footer">
+    <p class="entry-meta"><span class="entry-time">2019年7月5日</span> 1 次阅读</p>
+
+
+
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+      
+        <article class="entry-single">
+  
+  <header class="entry-header">
+    <h3 class="entry-title"><a href="https://superme-ray.github.io/post/moment%E7%9B%B8%E5%8A%A0%E7%9B%B8%E5%87%8F%E6%97%B6%E9%97%B4%E6%96%B9%E5%BC%8F/" title="Moment相加相减时间方式" class="entry-link">Moment相加相减时间方式</a></h3>
+  </header>
+
+  <p class="entry-summary">利用moment对时间进行加减天数，小时数方法 var startTime = ‘2017-12-12’ 对startTime进行加减一天的方法如下 moment(new Date(startTime)).add(1,‘days’) moment(new Date(startTime)).subtract(1,‘days’)
+ 需要注意的是，moment(param).add()中的param必须是ＩＳＯ格式的时间．不然无效．
+ </p>
+  <footer class="entry-footer">
+    <p class="entry-meta"><span class="entry-time">2019年7月4日</span> 1 次阅读</p>
+
+
+
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+      
+        <article class="entry-single">
+  
+  <header class="entry-header">
+    <h3 class="entry-title"><a href="https://superme-ray.github.io/post/%E5%A6%82%E4%BD%95%E8%AE%A9%E4%BD%A0%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E7%9A%84%E5%9C%A8google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%90%9C%E7%B4%A2%E5%88%B0/" title="如何让你的页面快速的在google浏览器搜索到" class="entry-link">如何让你的页面快速的在google浏览器搜索到</a></h3>
+  </header>
+
+  <p class="entry-summary">在你的博客或者网站中搜索框内输入搜索内容，将点击事件直接redirect到google搜索页面，前提是你必须在你的html里面设置了关键字，等等；
+ //输入的内容 q = encodeURIComponent(q); redirect to(&#39;https://www.google.com.hk/#hl=zh-CN&amp;q=site:example.com&#39; &#43; q);  </p>
+  <footer class="entry-footer">
+    <p class="entry-meta"><span class="entry-time">2019年7月3日</span> 1 次阅读</p>
+
+
+
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+      
+        <article class="entry-single">
+  
     <a href="https://superme-ray.github.io/post/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" title="小程序运行机制">
       <amp-img alt="小程序运行机制"
         height="244"
@@ -444,31 +534,14 @@ REST 全称是 Representational State Transfer（表述性状态转移），它�
 </article>
 
       
-        <article class="entry-single">
-  
-  <header class="entry-header">
-    <h3 class="entry-title"><a href="https://superme-ray.github.io/post/gen_code/" title="计算时间差的方法" class="entry-link">计算时间差的方法</a></h3>
-  </header>
-
-  <p class="entry-summary">const formatDiffTime = (endDate) =&gt; { let startTime = moment().toDate(); //开始时间 let endTime = moment(endDate, &#39;YYYY:MM:DD HH:mm:ss&#39;).toDate(); //结束时间 let diffTime = startTime.getTime() - endTime.getTime(); //时间差的毫秒数 //计算出相差天数 let days = Math.floor(diffTime / (24 * 3600 * 1000)); //计算出小时数 let leave1_h = diffTime % (24 * 3600 * 1000); //计算天数后剩余的毫秒数 let hours = Math.floor(leave1_h / (3600 * 1000)); //计算出分钟数 let leave1_m = leave1_h % (1000 * 3600);//计算小时后剩余的毫秒数 let minutes = Math.floor(leave1_m / (1000 * 60)); if (days &amp;&amp; !</p>
-  <footer class="entry-footer">
-    <p class="entry-meta"><span class="entry-time">2019年5月29日</span> 1 次阅读</p>
-
-
-
-
-
-
-
-
-
-
-
-  </footer>
-</article>
-
-      
     
+    
+      <nav class="pagination">
+        
+        
+          <a class="pagination-btn pagination-next" href="/page/2/">Older Posts →</a>
+        
+      </nav>
     
   </section>
 
