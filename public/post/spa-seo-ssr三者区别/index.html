@@ -10,7 +10,7 @@
     
 
     
-    <title>Test</title>
+    <title>SPA SEO SSR三者区别</title>
 
     
     
@@ -19,17 +19,31 @@
 
   
   
-  <meta name="author" content="Author Name" />
-  <meta name="description" content="Cut out summary from your post content here.
-">
+  <meta name="author" content="码哥ray" />
+  <meta name="description" content="SPA通俗的说就是单页面应用（single page application） 优点 页面之间的切换非常快 一定程度减少了后端服务器的压力 后端程序只需要提供api，不需要客户端到底是web端还是手机等
+缺点 首屏打开速度很慢，因为用户首次加载需要先下载SPA框架及应用程序的代码，然后再渲染页面。 不利于SEO搜索引擎优化
+SEO通俗的说就是搜索引擎优化(search engine optimization) SEO是一种通过了解搜索引擎的运作规则（如何抓取网站页面，如何索引以及如何根据特定的关键字展现搜索结果排序等）来调整网站，以提高该网站在搜索引擎中某些关键词的搜索结果排名。
+我们之前说SPA单页面应用，通过AJAX获取数据，这就难保证我们的页面能被搜索引擎正常收到，并且有一些搜索引擎不支持执行js和通过ajax获取数据，那就更不用提SEO了。为了解决这个问题，，SSR登场了 SSR通俗的说就是服务器端渲染(server side rendering) 优点 更快的响应时间，不用等待所有的js都下载完成，浏览器变成显示比较完整的页面 更好的SSR，我们可以将SEO的关键信息直接在后台就渲染成html，从而保证搜索引擎的爬虫都能爬取到关键数据
+缺点 占用更多的cpu和内存资源 一些常用的浏览器的api可能无法正常使用，比如window，document，alert等，如果使用的话需要对运行环境加以判断 开发调试会有一些麻烦，因为涉及到了浏览器及服务器，对于SPA的一些组件的声明周期的管理会变得复杂 可能会由于某些因素导致服务器渲染的结果与浏览器端的结果不一致。
+前后端分离的概念 传统的web前后端开发大多是前端将页面写好，让后端将页面集成到项目中，这里就存着一个前后端耦合的问题，首先对于后端来说，不仅要写后端逻辑，还得要集成前端页面。对于前端来说，也不是很轻松就能看到页面的真正渲染出来的样子，这样 肯定是不利于开发调试的，效率自然也就成了问题。针对上述问题，前后端分离的思想应运而生。
+基本概念 前后端根据AJAX接口进行数据的交互，目前常见的是后端直接将数据已JSON的格式返回给前端，前端根据后端服务器返回的数据，操作DOM。
+主要优点 分工明确，前后端各司其职，后端专注业务逻辑和功能的实现，前端专注页面实现和渲染。 接口明确，并行开发。在后端接口没有实现好之前，前端可以自己模拟接口提供测试数据。 提高开发效率，一定程度上减少了前后端的沟通成本
+总结 前后端分离降低了前端和都端的耦合度，提高了开发效率； SPA是前后端分离中前端的一种解决方案； SEO对于跟多网站很重要而普通的SPA又不利于SEO； SSR的出现一定成都上解决了SPA首屏慢的问题，又极大减少了普通SPA对于SEO的不利影响。">
 
   
   
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@gohugoio" />
-    <meta name="twitter:title" content="Test" />
-    <meta name="twitter:description" content="Cut out summary from your post content here.
-" />
+    <meta name="twitter:title" content="SPA SEO SSR三者区别" />
+    <meta name="twitter:description" content="SPA通俗的说就是单页面应用（single page application） 优点 页面之间的切换非常快 一定程度减少了后端服务器的压力 后端程序只需要提供api，不需要客户端到底是web端还是手机等
+缺点 首屏打开速度很慢，因为用户首次加载需要先下载SPA框架及应用程序的代码，然后再渲染页面。 不利于SEO搜索引擎优化
+SEO通俗的说就是搜索引擎优化(search engine optimization) SEO是一种通过了解搜索引擎的运作规则（如何抓取网站页面，如何索引以及如何根据特定的关键字展现搜索结果排序等）来调整网站，以提高该网站在搜索引擎中某些关键词的搜索结果排名。
+我们之前说SPA单页面应用，通过AJAX获取数据，这就难保证我们的页面能被搜索引擎正常收到，并且有一些搜索引擎不支持执行js和通过ajax获取数据，那就更不用提SEO了。为了解决这个问题，，SSR登场了 SSR通俗的说就是服务器端渲染(server side rendering) 优点 更快的响应时间，不用等待所有的js都下载完成，浏览器变成显示比较完整的页面 更好的SSR，我们可以将SEO的关键信息直接在后台就渲染成html，从而保证搜索引擎的爬虫都能爬取到关键数据
+缺点 占用更多的cpu和内存资源 一些常用的浏览器的api可能无法正常使用，比如window，document，alert等，如果使用的话需要对运行环境加以判断 开发调试会有一些麻烦，因为涉及到了浏览器及服务器，对于SPA的一些组件的声明周期的管理会变得复杂 可能会由于某些因素导致服务器渲染的结果与浏览器端的结果不一致。
+前后端分离的概念 传统的web前后端开发大多是前端将页面写好，让后端将页面集成到项目中，这里就存着一个前后端耦合的问题，首先对于后端来说，不仅要写后端逻辑，还得要集成前端页面。对于前端来说，也不是很轻松就能看到页面的真正渲染出来的样子，这样 肯定是不利于开发调试的，效率自然也就成了问题。针对上述问题，前后端分离的思想应运而生。
+基本概念 前后端根据AJAX接口进行数据的交互，目前常见的是后端直接将数据已JSON的格式返回给前端，前端根据后端服务器返回的数据，操作DOM。
+主要优点 分工明确，前后端各司其职，后端专注业务逻辑和功能的实现，前端专注页面实现和渲染。 接口明确，并行开发。在后端接口没有实现好之前，前端可以自己模拟接口提供测试数据。 提高开发效率，一定程度上减少了前后端的沟通成本
+总结 前后端分离降低了前端和都端的耦合度，提高了开发效率； SPA是前后端分离中前端的一种解决方案； SEO对于跟多网站很重要而普通的SPA又不利于SEO； SSR的出现一定成都上解决了SPA首屏慢的问题，又极大减少了普通SPA对于SEO的不利影响。" />
     <meta name="twitter:image" content="https://superme-ray.github.io/img/cover.jpg" />
   
 
@@ -39,7 +53,7 @@
 <meta name="generator" content="Hugo 0.55.6">
 
 
-<link rel="canonical" href="https://superme-ray.github.io/post/test/">
+<link rel="canonical" href="https://superme-ray.github.io/post/spa-seo-ssr%E4%B8%89%E8%80%85%E5%8C%BA%E5%88%AB/">
 <link rel="alternative" href="/index.xml" title="码哥Ray的博客" type="application/atom+xml">
 
 
@@ -219,21 +233,58 @@
     
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">Test</h1>
-      <p class="entry-meta"><span class="entry-time">May 29, 2019</span> 1 min read</p>
+      <h1 class="post-title">SPA SEO SSR三者区别</h1>
+      <p class="entry-meta"><span class="entry-time">Jul 12, 2019</span> 1 min read</p>
     </header>
     
 
-    <article class="post-content"><p>Cut out summary from your post content here.</p>
+    <article class="post-content"><p>SPA通俗的说就是单页面应用（single page application）
+优点
+页面之间的切换非常快
+一定程度减少了后端服务器的压力
+后端程序只需要提供api，不需要客户端到底是web端还是手机等</p>
 
-<p>The remaining content of your post.</p></article>
+<p>缺点
+首屏打开速度很慢，因为用户首次加载需要先下载SPA框架及应用程序的代码，然后再渲染页面。
+不利于SEO搜索引擎优化</p>
+
+<p>SEO通俗的说就是搜索引擎优化(search engine optimization)
+SEO是一种通过了解搜索引擎的运作规则（如何抓取网站页面，如何索引以及如何根据特定的关键字展现搜索结果排序等）来调整网站，以提高该网站在搜索引擎中某些关键词的搜索结果排名。</p>
+
+<p>我们之前说SPA单页面应用，通过AJAX获取数据，这就难保证我们的页面能被搜索引擎正常收到，并且有一些搜索引擎不支持执行js和通过ajax获取数据，那就更不用提SEO了。为了解决这个问题，，SSR登场了
+SSR通俗的说就是服务器端渲染(server side rendering)
+优点
+更快的响应时间，不用等待所有的js都下载完成，浏览器变成显示比较完整的页面
+更好的SSR，我们可以将SEO的关键信息直接在后台就渲染成html，从而保证搜索引擎的爬虫都能爬取到关键数据</p>
+
+<p>缺点
+占用更多的cpu和内存资源
+一些常用的浏览器的api可能无法正常使用，比如window，document，alert等，如果使用的话需要对运行环境加以判断
+开发调试会有一些麻烦，因为涉及到了浏览器及服务器，对于SPA的一些组件的声明周期的管理会变得复杂
+可能会由于某些因素导致服务器渲染的结果与浏览器端的结果不一致。</p>
+
+<p>前后端分离的概念
+传统的web前后端开发大多是前端将页面写好，让后端将页面集成到项目中，这里就存着一个前后端耦合的问题，首先对于后端来说，不仅要写后端逻辑，还得要集成前端页面。对于前端来说，也不是很轻松就能看到页面的真正渲染出来的样子，这样 肯定是不利于开发调试的，效率自然也就成了问题。针对上述问题，前后端分离的思想应运而生。</p>
+
+<p>基本概念
+前后端根据AJAX接口进行数据的交互，目前常见的是后端直接将数据已JSON的格式返回给前端，前端根据后端服务器返回的数据，操作DOM。</p>
+
+<p>主要优点
+分工明确，前后端各司其职，后端专注业务逻辑和功能的实现，前端专注页面实现和渲染。
+接口明确，并行开发。在后端接口没有实现好之前，前端可以自己模拟接口提供测试数据。
+提高开发效率，一定程度上减少了前后端的沟通成本</p>
+
+<p>总结
+前后端分离降低了前端和都端的耦合度，提高了开发效率；
+SPA是前后端分离中前端的一种解决方案；
+SEO对于跟多网站很重要而普通的SPA又不利于SEO；
+SSR的出现一定成都上解决了SPA首屏慢的问题，又极大减少了普通SPA对于SEO的不利影响。</p>
+</article>
     <footer class="post-footer">
       
       <ul class="post-tags">
         
-          <li class="post-tag"><a href="/tags/taga"><span class="tag">TagA</span></a></li>
-        
-          <li class="post-tag"><a href="/tags/tagb"><span class="tag">TagB</span></a></li>
+          <li class="post-tag"><a href="/tags/javascript"><span class="tag">Javascript</span></a></li>
         
       </ul>
       
